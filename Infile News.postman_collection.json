@@ -1,0 +1,256 @@
+{
+	"info": {
+		"_postman_id": "bb7679f7-6874-435f-b9ea-9a9e5b4eadd3",
+		"name": "Infile News",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5481226"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"rudy.alvarado@infile.com.gt\",\n    \"password\": \"password123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nombre\": \"Rudy Alvarado\",\n  \"email\": \"rudy.alvarado@infile.com.gt\",\n  \"password\": \"password123\",\n  \"rol\": \"ADMIN\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Categorias",
+			"item": [
+				{
+					"name": "GetAllCategorias",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJydWR5LmFsdmFyYWRvQGluZmlsZS5jb20uZ3QiLCJpYXQiOjE3Mzk0MDYyMzUsImV4cCI6MTczOTQ5MjYzNX0.op31CWXs_gSFitHUWNDR9mIpZVFv_I88SLkYqjsxF3c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nombre\": \"Rudy Alvarado\",\n  \"email\": \"rudy.alvarado@infile.com.gt\",\n  \"password\": \"password123\",\n  \"rol\": \"ADMIN\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/categorias",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"categorias"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Noticias",
+			"item": [
+				{
+					"name": "GetAllNoticias",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJydWR5LmFsdmFyYWRvQGluZmlsZS5jb20uZ3QiLCJpYXQiOjE3Mzk0MDYyMzUsImV4cCI6MTczOTQ5MjYzNX0.op31CWXs_gSFitHUWNDR9mIpZVFv_I88SLkYqjsxF3c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nombre\": \"Rudy Alvarado\",\n  \"email\": \"rudy.alvarado@infile.com.gt\",\n  \"password\": \"password123\",\n  \"rol\": \"ADMIN\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/noticias",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"noticias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetNoticiasById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJydWR5LmFsdmFyYWRvQGluZmlsZS5jb20uZ3QiLCJpYXQiOjE3Mzk0MDYyMzUsImV4cCI6MTczOTQ5MjYzNX0.op31CWXs_gSFitHUWNDR9mIpZVFv_I88SLkYqjsxF3c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nombre\": \"Rudy Alvarado\",\n  \"email\": \"rudy.alvarado@infile.com.gt\",\n  \"password\": \"password123\",\n  \"rol\": \"ADMIN\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/noticias/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"noticias",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetNoticiasRecomendadasByIdNoticia",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJydWR5LmFsdmFyYWRvQGluZmlsZS5jb20uZ3QiLCJpYXQiOjE3Mzk0MDYyMzUsImV4cCI6MTczOTQ5MjYzNX0.op31CWXs_gSFitHUWNDR9mIpZVFv_I88SLkYqjsxF3c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nombre\": \"Rudy Alvarado\",\n  \"email\": \"rudy.alvarado@infile.com.gt\",\n  \"password\": \"password123\",\n  \"rol\": \"ADMIN\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/noticias/1/recomendadas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"noticias",
+								"1",
+								"recomendadas"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
