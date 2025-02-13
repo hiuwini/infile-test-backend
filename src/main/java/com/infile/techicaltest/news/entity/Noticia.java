@@ -22,6 +22,7 @@ public class Noticia {
 
     private String descripcion;
 
+    @Column(name = "imagen")
     private String urlImagen;
 
     private LocalDateTime fechaPublicacion;

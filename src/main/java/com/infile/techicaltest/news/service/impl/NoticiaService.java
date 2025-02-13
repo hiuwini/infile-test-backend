@@ -28,7 +28,7 @@ public class NoticiaService implements INoticiaService {
                 .map(n -> NoticiaDTO.builder()
                         .id(n.getId())
                         .titulo(n.getTitulo())
-                        .imagen(n.getUrlImagen())
+                        .urlImagen(n.getUrlImagen())
                         .descripcion(n.getDescripcion())
                         .build())
                 .collect(Collectors.toList());

@@ -18,28 +18,16 @@ public class NoticiaController {
     @Autowired
     private NoticiaService noticiaService;
 
-    /**
-     * 1) Listado de noticias (GET /api/noticias)
-     * Protegido por JWT
-     */
     @GetMapping
     public List<NoticiaDTO> listarNoticias() {
         return noticiaService.listarNoticias();
     }
 
-    /**
-     * 2) Detalles de una noticia (GET /api/noticias/{id})
-     * Protegido por JWT
-     */
     @GetMapping("/{id}")
     public Noticia obtenerNoticia(@PathVariable Long id) {
         return noticiaService.obtenerNoticiaPorId(id);
     }
 
-    /**
-     * 3) Noticias recomendadas (GET /api/noticias/{id}/recomendadas)
-     * Protegido por JWT
-     */
     @GetMapping("/{id}/recomendadas")
     public List<Noticia> obtenerNoticiasRecomendadas(@PathVariable Long id) {
         return noticiaService.obtenerNoticiasRecomendadas(id);
